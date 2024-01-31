@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+      /* Add horizontal scrollbar for small screens */
+      @media (max-width: 768px) {
+        .overflow-x-scroll {
+          overflow-x: auto;
+        }
+      }
+      /* Style the table */
+      .dataTables_wrapper {
+        border: 1px solid #e2e8f0;
+        border-radius: 5px;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      }
+      .dataTables_wrapper select,
+      .dataTables_wrapper .dataTables_filter input {
+        color: #4a5568;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        line-height: 1.25;
+        border-width: 2px;
+        border-radius: 0.25rem;
+        border-color: #edf2f7;
+        background-color: #edf2f7;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button {
+        font-weight: 700;
+        border-radius: 0.25rem;
+        border: 1px solid transparent;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        color: #fff !important;
+        font-weight: 700;
+        border-radius: 0.25rem;
+        background: #667eea !important;
+        border: 1px solid transparent;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        color: #fff !important;
+        font-weight: 700;
+        border-radius: 0.25rem;
+        background: #667eea !important;
+        border: 1px solid transparent;
+      }
+      .dataTables_wrapper .no-footer {
+        border-bottom: 1px solid #e2e8f0;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+      }
+
+/* new stuff */
+
+      .py-10 {
+          padding-top: 4.5rem;
+          padding-bottom: 2.5rem;
+      }
+
+/* Updated CSS for the footer */
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+/* new stuff until here  */
+
+    </style>
+    <title>Resumetrics | Company</title>
+  </head>
+
+  <body bgcolor="#fff0ec ">
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-6">
+      <!-- flex container  -->
+      <div class="flex items-center justify-between">
+        <!-- logo  -->
+        <div class="pt-2">
+          <a href="mainpage"
+            ><img src="../static/img/FINAL LOGO.png" alt="" class=""
+          /></a>
+        </div>
+        <!-- menu items  -->
+        <div class="hidden space-x-6 md:flex">
+          <a href="candidate" class="hover:text-darkGrayishBlue"
+            >Candidate</a
+          >
+          <a href="company" class="hover:text-darkGrayishBlue">Company</a>
+          <a href="howitworks" class="hover:text-darkGrayishBlue"
+            >How It Works</a
+          >
+          <a href="aboutus" class="hover:text-darkGrayishBlue"
+            >About Us</a
+          >
+          <!-- <a href="#" class="hover:text-darkGrayishBlue">Community</a> -->
+        </div>
+        <!-- button  -->
+        <a
+          href="#"
+          class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
+          >Get Started</a
+        >
+        <!-- hamburger menu  -->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"> </span>
+          <span class="hamburger-middle"> </span>
+          <span class="hamburger-bottom"> </span>
+        </button>
+      </div>
+      <!-- mobile menu  -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
+          <a href="candidate">Candidate</a>
+          <a href="company">Company</a>
+          <a href="howitworks">How It Works</a>
+          <a href="aboutus">About Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- write your center screen code design here  -->
+  <div class="content-container flex flex-col min-h-screen"> <!--new stuff-->
+    <div class="container mx-auto p-4">
+      <!-- Title -->
+      <!-- <h1 class="text-3xl font-bold text-indigo-500 text-center mb-8">Responsive DataTables.net Table</h1> -->
+
+      <!-- Card -->
+      <div
+        id="recipients"
+        class="bg-white shadow-lg rounded-lg overflow-hidden overflow-x-scroll"
+      >
+        <table id="example" class="stripe hover w-full">
+          <thead class="bg-indigo-500 text-white">
+            <tr>
+              <th class="py-2" data-priority="1">ID</th>
+              <th class="py-2" data-priority="2">Full Name</th>
+              <th class="py-2" data-priority="3">Email</th>
+              <th class="py-2" data-priority="4">Company</th>
+              <th class="py-2" data-priority="5">Position</th>
+              <th class="py-2" data-priority="6">Resume Score</th>
+              <th class="py-2" data-priority="7">Resume Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for user in users %}
+              <tr>
+                <td class="py-2">{{ user.id }}</td>
+                <td class="py-2">{{ user.fullname }}</td>
+                <td class="py-2">{{ user.email }}</td>
+                <td class="py-2">{{ user.company }}</td>
+                <td class="py-2">{{ user.position }}</td>
+                <td class="py-2">{{ user.resume_score }}</td>
+<!-- new
+ -->
+                <td class="py-2">
+                  {% if user.files %} <!-- Check if a CV file is associated with the user -->
+                    <a href="{{ url_for('serve_cv', file_name=user.files) }}" target="_blank">Download Resume <i class="fas fa-paperclip"></i>
+                    </a>
+                  {% else %}
+                    No CV uploaded
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+            
+          </tbody>
+        </table>
+      </div>
+      <!-- /Card -->
+    </div>
+
+    <!-- then your footer code here  -->
+    <footer class="bg-veryDarkBlue mt-16">
+      <!-- flex container  -->
+      <div
+        class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto -mt-7 space-y-8 md:flex-row md:space-y-0"
+      >
+        <!-- logo and social links container  -->
+        <div
+          class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+        >
+          <div class="mx-auto my-6 text-center text-white md:hidden">
+            Copyright &copy; 2022, All Rights Reserved
+          </div>
+          <!-- logo  -->
+          <div>
+            <img src="../static/img/logo-white.svg" alt="" class="h-8" />
+          </div>
+          <!-- social links container  -->
+          <div class="flex justify-center space-x-4">
+            <!-- link 1  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-facebook.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 2  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-youtube.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 3  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-twitter.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 4  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-pinterest.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 5  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-instagram.svg" alt="" class="h-8" />
+            </a>
+          </div>
+        </div>
+        <!-- list container  -->
+        <div class="flex justify-around space-x-32">
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="mainpage" class="hover:text-brightRed">Home</a>
+            <a href="candidate" class="hover:text-brightRed"
+              >Candidate</a
+            >
+            <a href="company" class="hover:text-brightRed">Company</a>
+            <!-- <a href="#" class="hover:text-brightRed">About</a> -->
+          </div>
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="aboutus" class="hover:text-brightRed">About Us</a>
+            <a href="howitworks" class="hover:text-brightRed"
+              >How It Works</a
+            >
+            <!-- <a href="#" class="hover:text-brightRed">Privacy Policy</a> -->
+          </div>
+        </div>
+        <!-- input container  -->
+        <div class="flex flex-col justify-between">
+          <!-- <form action="">
+            <div class="flex space-x-3">
+              <input
+                type="text"
+                class="flex-1 px-4 rounded-full focus:outline-none"
+                placeholder="Updated in your Inbox"
+              />
+              <button
+                class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none"
+              >
+                Go
+              </button>
+            </div>
+          </form> -->
+          <div class="hidden text-white md:block">
+            Copyright &copy; 2022, All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Datatables -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var table = $('#example')
+          .DataTable({
+            responsive: true,
+          })
+          .columns.adjust()
+          .responsive.recalc();
+      });
+    </script>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
+
+<!-- 
+.py-24 {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+} -->
+
+<!-- @media (min-width: 480px) {
+.sm\:py-32 {
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+} -->

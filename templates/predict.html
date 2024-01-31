@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+</head>
+<body>
+    <h1>Predictions</h1>
+
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+        <label for="files">Upload File (PDF, Word, or Text file):</label>
+        <input type="file" name="files" accept=".pdf, .doc, .docx, .txt" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if prediction %}
+    <p>Result: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>

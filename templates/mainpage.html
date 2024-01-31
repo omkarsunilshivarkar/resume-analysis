@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <title>Resumetrics | Let's Analyze</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-6">
+      <!-- flex container  -->
+      <div class="flex items-center justify-between">
+        <!-- logo  -->
+        <div class="pt-2">
+          <a href="mainpage"><img src="../static/img/FINAL LOGO.png" alt="" class=""></a>
+          
+        </div>
+        <!-- menu items  -->
+        <div class="hidden space-x-6 md:flex">
+          <a href="candidate" class="hover:text-darkGrayishBlue">Candidate</a>
+          <a href="company" class="hover:text-darkGrayishBlue">Company</a>
+          <a href="howitworks" class="hover:text-darkGrayishBlue">How It Works</a>
+          <a href="aboutus" class="hover:text-darkGrayishBlue">About Us</a>
+          <!-- <a href="#" class="hover:text-darkGrayishBlue">Community</a> -->
+        </div>
+        <!-- button  -->
+        <a
+          href="#"
+          class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
+          >Get Started</a
+        >
+        <!-- hamburger menu  -->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"> </span>
+          <span class="hamburger-middle"> </span>
+          <span class="hamburger-bottom"> </span>
+        </button>
+      </div>
+      <!-- mobile menu  -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
+          <a href="candidate">Candidate</a>
+          <a href="company">Company</a>
+          <a href="howitworks">How It Works</a>
+          <a href="aboutus">About Us</a>
+          
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section  -->
+    <section id="hero">
+      <!-- flex container  -->
+      <div
+        class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row"
+      >
+        <!-- left item  -->
+        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+          <h1
+            class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
+          >
+            Understand where you actually stand in this competitive world
+          </h1>
+          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+            Resumetrics makes it easier for companies to judge candidates based
+            on their resumes automatically rather than reading every resume
+            manually
+            <!-- Manage makes it simple for software teams to plan day-to-day tasks
+            while keeping the larger team goals in view -->
+          </p>
+          <div class="flex justify-center md:justify-start">
+            <a
+              href="#"
+              class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+              >Get Started</a
+            >
+          </div>
+        </div>
+        <!-- image  -->
+        <div class="md:w-1/2">
+          <img src="../static/img/illustration-intro.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features">
+      <!-- Flex container -->
+      <div
+        class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row"
+      >
+        <!-- What's Different -->
+        <div class="flex flex-col space-y-12 md:w-1/2">
+          <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
+            What's different about Resumetrics?
+          </h2>
+          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+            Resumetrics checks both techincal and emotional skills of the
+            candidate in order to understand whether the candidate would be able
+            to handle the corporate as well as the emotional pressure.
+            <!-- Manage provides
+            all the functionality your team needs, without the complexity. Our
+            software is tailor-made for modern digital product teams. -->
+          </p>
+        </div>
+        <!-- numbered list  -->
+        <div class="flex flex-col space-y-8 md:w-1/2">
+          <!-- list item 1 -->
+          <div
+            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+          >
+            <!-- heading  -->
+            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+                >
+                  01
+                </div>
+                <h3 class="text-base font-bold md:mb-4 md:hidden">
+                  Candidate Portal
+                </h3>
+              </div>
+            </div>
+            <div>
+              <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Candidate Portal
+              </h3>
+              <p class="text-darkGrayishBlue">
+                The candidates have to register themselves before applying from
+                this portal.Once they register themselves they get to see the
+                available openings and the corresponding positions.They have to
+                choose their preferences and fill in the required details and
+                upload their resume.
+                <!-- See how your day-to-day tasks fit into the wider vision.
+                Go from tracking progress at the milestone level all the way
+                down to the smallest of details. Never lose sight of the bigger
+                picture again. -->
+              </p>
+            </div>
+          </div>
+
+          <!-- list item 2 -->
+          <div
+            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+          >
+            <!-- heading  -->
+            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+                >
+                  02
+                </div>
+                <h3 class="text-base font-bold md:mb-4 md:hidden">
+                  Company Portal
+                </h3>
+              </div>
+            </div>
+            <div>
+              <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Company Portal
+              </h3>
+              <p class="text-darkGrayishBlue">
+                The company has to register themselves and display the openings
+                and requirements.Once the candidate applies they would get the
+                details and the Resume Score of the candidate.
+              </p>
+            </div>
+          </div>
+
+          <!-- list item 3 -->
+          <div
+            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+          >
+            <!-- heading  -->
+            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+                >
+                  03
+                </div>
+                <h3 class="text-base font-bold md:mb-4 md:hidden">
+                  Get Your Applications In One Place
+                </h3>
+              </div>
+            </div>
+            <div>
+              <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Get Your Applications In One Place
+              </h3>
+              <p class="text-darkGrayishBlue">
+                The candidate would be able to track all his applications in all
+                the companies he has applied through this website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials  -->
+    <section id="testimonials">
+      <!-- container to heading and testm blocks  -->
+      <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+        <!-- heading  -->
+        <h2 class="text-4xl font-bold text-center">
+          What's different about Resumetrics?
+        </h2>
+        <!-- testimonials container  -->
+        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+          <!-- testimonials 1  -->
+          <div
+            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+          >
+            <img src="../static/img/avatar-anisha.png" alt="" class="w-16 -mt-14" />
+            <h5 class="text-lg font-bold">Anisha Li</h5>
+            <p class="text-sm text-darkGrayishBlue">
+              “Resumetrics has changed the way we scan and filter candidates
+              based on their resume.We get a beforehand understanding of the
+              candidate through this website.”
+            </p>
+          </div>
+
+          <!-- testimonials 2  -->
+          <div
+            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
+          >
+            <img src="../static/img/avatar-ali.png" alt="" class="w-16 -mt-14" />
+            <h5 class="text-lg font-bold">Ali Bravo</h5>
+            <p class="text-sm text-darkGrayishBlue">
+              “This helps us drop down the training period as we get candidates
+              who are industry ready.”
+            </p>
+          </div>
+
+          <!-- testimonials  3 -->
+          <div
+            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
+          >
+            <img src="../static/img/avatar-richard.png" alt="" class="w-16 -mt-14" />
+            <h5 class="text-lg font-bold">Richard Watts</h5>
+            <p class="text-sm text-darkGrayishBlue">
+              “Sometimes being technically strong is not the only criteria as an
+              individual requires to be emotionally strong as well.This helps us
+              understand his IQ as well as EQ.”
+            </p>
+          </div>
+        </div>
+        <!-- buttons  -->
+        <div class="my-16">
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- cta section  -->
+    <section id="cta" class="bg-brightRed">
+      <div
+        class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
+      >
+        <!-- heading  -->
+        <h2
+          class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left"
+        >
+          Simplify how you filter candidates
+        </h2>
+        <!-- button  -->
+        <div>
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- footer  -->
+    <footer class="bg-veryDarkBlue">
+      <!-- flex container  -->
+      <div
+        class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+      >
+        <!-- logo and social links container  -->
+        <div
+          class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+        >
+          <div class="mx-auto my-6 text-center text-white md:hidden">
+            Copyright &copy; 2022, All Rights Reserved
+          </div>
+          <!-- logo  -->
+          <div>
+            <img src="../static/img/logo-white.svg" alt="" class="h-8" />
+          </div>
+          <!-- social links container  -->
+          <div class="flex justify-center space-x-4">
+            <!-- link 1  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-facebook.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 2  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-youtube.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 3  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-twitter.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 4  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-pinterest.svg" alt="" class="h-8" />
+            </a>
+            <!-- link 5  -->
+            <a href="#" class="">
+              <img src="../static/img/icon-instagram.svg" alt="" class="h-8" />
+            </a>
+          </div>
+        </div>
+        <!-- list container  -->
+        <div class="flex justify-around space-x-32">
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="mainpage" class="hover:text-brightRed">Home</a>
+            <a href="candidate" class="hover:text-brightRed">Candidate</a>
+            <a href="company" class="hover:text-brightRed">Company</a>
+            <!-- <a href="#" class="hover:text-brightRed">About</a> -->
+          </div>
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="aboutus" class="hover:text-brightRed">About Us</a>
+            <a href="howitworks" class="hover:text-brightRed">How It Works</a>
+            <!-- <a href="#" class="hover:text-brightRed">Privacy Policy</a> -->
+          </div>
+        </div>
+        <!-- input container  -->
+        <div class="flex flex-col justify-between">
+          <!-- <form action="">
+            <div class="flex space-x-3">
+              <input
+                type="text"
+                class="flex-1 px-4 rounded-full focus:outline-none"
+                placeholder="Updated in your Inbox"
+              />
+              <button
+                class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none"
+              >
+                Go
+              </button>
+            </div>
+          </form> -->
+          <div class="hidden text-white md:block">
+            Copyright &copy; 2022, All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
